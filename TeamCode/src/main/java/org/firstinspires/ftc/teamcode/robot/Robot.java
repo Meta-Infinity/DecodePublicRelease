@@ -205,7 +205,7 @@ public class Robot {
         double staticDy = goalPose.getY() - turretFieldY;
         double staticDistance = Math.sqrt(staticDx * staticDx + staticDy * staticDy);
 
-        if(sotm && (staticDistance > 30.0 || staticDistance < 110)){ // yo wtf are we doing bro ts is true every time :sob:
+        if(sotm && (staticDistance > 30.0 || staticDistance < 110)){ // yo wtf are we doing bro the second half is true every time :sob:
             double flightTime = storage.getTime(staticDistance);
             trackPose = new Pose(goalPose.getX() - velocity.getXComponent()*flightTime, goalPose.getY() - velocity.getYComponent()*flightTime);
         } else{
